@@ -4,10 +4,14 @@ import 'package:fruits/core/helper-functions/app_router.dart';
 import 'package:fruits/core/services/prefs.dart';
 import 'package:fruits/core/utils/app_colors.dart';
 import 'package:fruits/generated/l10n.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
-
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+);
   Prefs.init();
   runApp( const Fruits());
 }
