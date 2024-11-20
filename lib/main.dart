@@ -5,7 +5,7 @@ import 'package:fruits/core/services/prefs.dart';
 import 'package:fruits/core/utils/app_colors.dart';
 import 'package:fruits/generated/l10n.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
+import 'firebase_options.dart'; 
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();

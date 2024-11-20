@@ -52,7 +52,7 @@ class SignupViewBody extends StatelessWidget {
             children: [
               Text(
                 'لديك حساب بالفعل؟',
-                style: TextStyles.regular13
+                style: TextStyles.semiBold13
                     .copyWith(color: const Color(0xFF949D9E)),
               ),
               TextButton(
