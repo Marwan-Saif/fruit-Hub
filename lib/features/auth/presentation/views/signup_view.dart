@@ -4,7 +4,6 @@ import 'package:fruits/core/services/getit_service.dart';
 import 'package:fruits/core/widgets/build_appbar.dart';
 import 'package:fruits/features/auth/domain/repos/auth_repo.dart';
 import 'package:fruits/features/auth/presentation/manager/singup_cubit/singup_cubit.dart';
-import 'package:fruits/features/auth/presentation/views/widgets/signup_viewbody.dart';
 import 'package:fruits/features/auth/presentation/views/widgets/singup_viewbody_blocconsumer.dart';
 
 class SignupView extends StatelessWidget {
@@ -19,7 +18,7 @@ class SignupView extends StatelessWidget {
           context: context,
           title: 'تسجيل جديد',
         ),
-        body: SingUpviewBodyBlocConsumer(),
+        body: const SingUpviewBodyBlocConsumer(),
       ),
     );
   }
