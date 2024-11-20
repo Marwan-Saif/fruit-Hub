@@ -24,6 +24,7 @@ class SignupViewBody extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Form(
           key: formKey,
+          autovalidateMode: autovalidateMode,
           child: Column(children: [
             const SizedBox(height: 24),
             CustomTextFormField(

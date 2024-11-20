@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruits/core/widgets/custom_progresshub.dart';
 import 'package:fruits/core/widgets/custom_snakbar.dart';
 import 'package:fruits/features/auth/presentation/manager/singup_cubit/singup_cubit.dart';
 import 'package:fruits/features/auth/presentation/views/widgets/signup_viewbody.dart';
-import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 class SingUpviewBodyBlocConsumer extends StatelessWidget {
   const SingUpviewBodyBlocConsumer({
@@ -21,9 +21,8 @@ class SingUpviewBodyBlocConsumer extends StatelessWidget {
         }
       },
       builder: (context, state) {
-        return ModalProgressHUD(
-            inAsyncCall: state is SingupLoading? true : false, 
-            progressIndicator: const CircularProgressIndicator(),
+        return CustomProgressHub(
+            isLoading: state is SingupLoading? true : false, 
             child: SignupViewBody());
       },
     );
