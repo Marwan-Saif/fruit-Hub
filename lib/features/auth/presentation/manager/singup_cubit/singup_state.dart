@@ -1,7 +1,7 @@
 part of 'singup_cubit.dart';
 
-@immutable
-sealed class SingupState {}
+
+abstract class SingupState {}
 
 final class SingupInitial extends SingupState {}
 

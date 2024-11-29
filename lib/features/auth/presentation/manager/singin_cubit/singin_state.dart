@@ -1,7 +1,6 @@
 part of 'singin_cubit.dart';
 
-@immutable
-sealed class SinginState {}
+abstract class SinginState {}
 
 final class SinginInitialState extends SinginState {}
 
