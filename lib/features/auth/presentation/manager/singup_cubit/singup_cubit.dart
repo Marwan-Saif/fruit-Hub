@@ -1,7 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:fruits/features/auth/domain/entites/user_entity.dart';
 import 'package:fruits/features/auth/domain/repos/auth_repo.dart';
-import 'package:meta/meta.dart';
 
 part 'singup_state.dart';
 

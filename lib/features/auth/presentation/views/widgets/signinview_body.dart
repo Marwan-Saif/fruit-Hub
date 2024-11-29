@@ -90,7 +90,13 @@ class _SigninViewBodyState extends State<SigninViewBody> {
             const SizedBox(height: 37),
             orDividor(),
             const SizedBox(height: 32),
-            const SocialMediaLoginButton(
+             SocialMediaLoginButton(
+              onTap: () {
+                context
+                      .read<SinginCubit>()
+                      .signInWithGoogle();
+                // context.<singinCubit>read().sing
+              },
               title: 'تسجيل الدخول باستخدام Google',
               imagePath: Assets.imagesGoogleIcon,
             ),
@@ -100,9 +106,12 @@ class _SigninViewBodyState extends State<SigninViewBody> {
               imagePath: Assets.imagesApple,
             ),
             const SizedBox(height: 16),
-            const SocialMediaLoginButton(
+             SocialMediaLoginButton(
               title: 'تسجيل الدخول باستخدام Facebook',
               imagePath: Assets.imagesFacebookIcon,
+              onTap:(){
+                context.read<SinginCubit>().signInWithFacebook();
+              }
             ),
           ],
         ),
