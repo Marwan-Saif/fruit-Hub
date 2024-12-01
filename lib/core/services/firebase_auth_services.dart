@@ -7,6 +7,10 @@ import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 
 
 class FirebaseAuthServices {
+
+  Future deleteUser() async {
+    await FirebaseAuth.instance.currentUser!.delete();  
+  }
   Future<User> createUserWithEmailAndPassword(
       {required String email, required password}) async {
     try {

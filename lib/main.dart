@@ -12,10 +12,11 @@ import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  setUpServiceLocator();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  setUpServiceLocator();
+  
   Prefs.init();
   Bloc.observer = CustomBlocObserver();
   runApp(const Fruits());
