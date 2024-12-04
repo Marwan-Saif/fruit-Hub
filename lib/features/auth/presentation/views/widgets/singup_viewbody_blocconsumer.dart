@@ -4,6 +4,7 @@ import 'package:fruits/core/widgets/custom_progresshub.dart';
 import 'package:fruits/core/widgets/custom_snakbar.dart';
 import 'package:fruits/features/auth/presentation/manager/singup_cubit/singup_cubit.dart';
 import 'package:fruits/features/auth/presentation/views/widgets/signup_viewbody.dart';
+import 'package:go_router/go_router.dart';
 
 class SingUpviewBodyBlocConsumer extends StatelessWidget {
   const SingUpviewBodyBlocConsumer({
@@ -15,6 +16,7 @@ class SingUpviewBodyBlocConsumer extends StatelessWidget {
     return BlocConsumer<SingupCubit, SingupState>(
       listener: (context, state) {
         if (state is SingupSuccess) {
+          context.pop();
           // Navigator.pushReplacementNamed(context, '/signin');
         } else if (state is Singupfailure) {
           customSnackBar(context, state.message);
@@ -22,11 +24,9 @@ class SingUpviewBodyBlocConsumer extends StatelessWidget {
       },
       builder: (context, state) {
         return CustomProgressHub(
-            isLoading: state is SingupLoading? true : false, 
+            isLoading: state is SingupLoading ? true : false,
             child: SignupViewBody());
       },
     );
   }
-
-
 }

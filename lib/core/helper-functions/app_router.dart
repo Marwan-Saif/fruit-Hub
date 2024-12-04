@@ -1,5 +1,6 @@
 import 'package:fruits/features/auth/presentation/views/signin_view.dart';
 import 'package:fruits/features/auth/presentation/views/signup_view.dart';
+import 'package:fruits/features/home/presentation/views/home_view.dart';
 import 'package:fruits/features/onboarding/presentation/views/onboarding.dart';
 import 'package:fruits/features/splash/presentation/views/splash_view.dart';
 import 'package:go_router/go_router.dart';
@@ -8,6 +9,8 @@ abstract class AppRouter {
   static const onBoarding = '/onboarding';
   static const signinView = '/signin';
   static const signupView = '/signup';
+  static const homeView = '/home';
+
   // static final splashScreen = '/splash';
   static final roter = GoRouter(routes: [
     GoRoute(
@@ -25,6 +28,10 @@ abstract class AppRouter {
     GoRoute(
       path: signupView,
       builder: (context, state) => const SignupView(),
+    ),
+    GoRoute(
+      path: homeView,
+      builder: (context, state) => const HomeView(),
     ),
     // GoRoute(
     //     path: kBookDetailsView,
