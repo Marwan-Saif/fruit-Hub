@@ -18,6 +18,14 @@ class Assets {
   /// assets/images/featured_item_background.svg
   static const String imagesFeaturedItemBackground = "assets/images/featured_item_background.svg";
 
+  /// Assets for imagesFilterIcon
+  /// assets/images/filter_icon.svg
+  static const String imagesFilterIcon = "assets/images/filter_icon.svg";
+
+  /// Assets for imagesFruitsTest
+  /// assets/images/fruits_test.svg
+  static const String imagesFruitsTest = "assets/images/fruits_test.svg";
+
   /// Assets for imagesGoogleIcon
   /// assets/images/google_icon.svg
   static const String imagesGoogleIcon = "assets/images/google_icon.svg";
@@ -57,6 +65,10 @@ class Assets {
   /// Assets for imagesProfileImge
   /// assets/images/profile_imge.svg
   static const String imagesProfileImge = "assets/images/profile_imge.svg";
+
+  /// Assets for imagesSearchIcon
+  /// assets/images/search_icon.svg
+  static const String imagesSearchIcon = "assets/images/search_icon.svg";
 
   /// Assets for imagesSplashBottom
   /// assets/images/splash_bottom.svg

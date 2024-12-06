@@ -7,7 +7,6 @@ import 'package:fruits/core/widgets/custom_progresshub.dart';
 import 'package:fruits/core/widgets/custom_snakbar.dart';
 import 'package:fruits/features/auth/presentation/manager/singin_cubit/singin_cubit.dart';
 import 'package:fruits/features/auth/presentation/views/widgets/signinview_body.dart';
-import 'package:fruits/features/home/presentation/views/home_view.dart';
 import 'package:go_router/go_router.dart';
 
 class SinginviewBodyConsumer extends StatelessWidget {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:fruits/constants.dart';
 import 'package:fruits/core/helper-functions/app_router.dart';
 import 'package:fruits/core/services/prefs.dart';
