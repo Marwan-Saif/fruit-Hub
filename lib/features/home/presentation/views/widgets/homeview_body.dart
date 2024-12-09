@@ -4,6 +4,7 @@ import 'package:fruits/core/widgets/fruit_item.dart';
 import 'package:fruits/features/home/presentation/views/widgets/beastselling_header.dart';
 import 'package:fruits/features/home/presentation/views/widgets/custom_home_appbar.dart';
 import 'package:fruits/features/home/presentation/views/widgets/featured_list.dart';
+import 'package:fruits/features/home/presentation/views/widgets/product_gridview.dart';
 import 'package:fruits/features/home/presentation/views/widgets/search_textfield.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -32,12 +33,12 @@ class HomeViewBody extends StatelessWidget {
                 BeastsellingHeader(),
                 SizedBox(
                 height: 22,),
-                FruitItem()
+                
 
               
             ],
           )),
-      
+      ProductGridview()
         ],
       ),
     ) ;

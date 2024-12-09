@@ -1,0 +1,21 @@
+import 'package:flutter/material.dart';
+import 'package:fruits/core/widgets/fruit_item.dart';
+
+class ProductGridview extends StatelessWidget {
+  const ProductGridview({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SliverGrid.builder(
+      itemCount: 6,
+      gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        mainAxisSpacing: 10,
+        crossAxisSpacing: 10,
+        childAspectRatio: 163/214
+
+      ),
+      itemBuilder: (context, index) => const FruitItem(),
+    );
+  }
+}

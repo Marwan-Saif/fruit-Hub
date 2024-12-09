@@ -13,21 +13,22 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
-    @override
+  @override
   void initState() {
     Future.delayed(const Duration(seconds: 2), () {
-      if(Prefs.getData(key: kIsOnBoardingViewSeen) == true){
-        GoRouter.of(context).pushReplacement(AppRouter.signinView);
+      if (Prefs.getData(key: kIsOnBoardingViewSeen) == true) {
+        print(
+            "ابقي عدل النفجيشن للهوم لما تحط الشيرد بريفرنس بتاع تسجيل الدخول ");
+
+        GoRouter.of(context).pushReplacement(AppRouter.homeView);
       } else {
         GoRouter.of(context).pushReplacement(AppRouter.onBoarding);
       }
-    
-    }
-    
-    );
+    });
 
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return const SplashViewBody();
