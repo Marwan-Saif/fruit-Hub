@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruits/constants.dart';
 import 'package:fruits/core/helper-functions/app_router.dart';
+import 'package:fruits/core/services/firebase_auth_services.dart';
+import 'package:fruits/core/services/getit_service.dart';
 import 'package:fruits/core/services/prefs.dart';
 import 'package:fruits/features/splash/presentation/views/widgets/splashview_body.dart';
 import 'package:go_router/go_router.dart';
@@ -17,10 +19,13 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     Future.delayed(const Duration(seconds: 2), () {
       if (Prefs.getData(key: kIsOnBoardingViewSeen) == true) {
-        print(
-            "ابقي عدل النفجيشن للهوم لما تحط الشيرد بريفرنس بتاع تسجيل الدخول ");
-
-        GoRouter.of(context).pushReplacement(AppRouter.homeView);
+        // print(
+        //     "ابقي عدل النفجيشن للهوم لما تحط الشيرد بريفرنس بتاع تسجيل الدخول ");
+        if (getit.get<FirebaseAuthServices>().isUserSignedIn()) {
+          GoRouter.of(context).pushReplacement(AppRouter.homeView);
+        } else {
+          GoRouter.of(context).pushReplacement(AppRouter.signinView);
+        }
       } else {
         GoRouter.of(context).pushReplacement(AppRouter.onBoarding);
       }

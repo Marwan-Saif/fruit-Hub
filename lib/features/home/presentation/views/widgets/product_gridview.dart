@@ -6,9 +6,10 @@ class ProductGridview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverGrid.builder(
+    return
+     SliverGrid.builder(
       itemCount: 6,
-      gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate:  const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         mainAxisSpacing: 10,
         crossAxisSpacing: 10,

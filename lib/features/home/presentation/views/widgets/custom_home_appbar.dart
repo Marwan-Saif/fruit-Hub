@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 import 'package:fruits/core/utils/app_images.dart';
 import 'package:fruits/core/utils/app_text_styles.dart';
+import 'package:fruits/core/widgets/notification_widget.dart';
 
 class CustomHomeAppbar extends StatelessWidget {
   const CustomHomeAppbar({super.key});
@@ -11,12 +10,8 @@ class CustomHomeAppbar extends StatelessWidget {
   Widget build(BuildContext context) {
     // return SliverToBoxAdapter(child: Container());
     return ListTile(
-        trailing: const CircleAvatar(
-          backgroundColor: Color(0xFFEEF8ED),
-          child: Image(
-            image: Svg((Assets.imagesNotificationicon)),
-          ),
-        ),
+      contentPadding: const EdgeInsets.all(0),
+        trailing: const NotificationWidget(),
         leading: Image.asset(Assets.imagesProfileImage),
         title: Text(
           'صباح الخير !..',
